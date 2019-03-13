@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import gulpHtmlmin from 'gulp-htmlmin';
-
 import { templates as config } from './config';
 
 /**

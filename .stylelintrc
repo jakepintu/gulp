@@ -1,7 +1,8 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-airbnb",
   "plugins": ["stylelint-order"],
   "rules": {
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "string-quotes": "single"
   }
 }

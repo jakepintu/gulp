@@ -1,12 +1,11 @@
 import gulp from 'gulp';
-import gulpSass from 'gulp-sass';
-import sourcemaps from 'gulp-sourcemaps';
+import changed from 'gulp-changed-in-place';
 import cleancss from 'gulp-clean-css';
 import plumber from 'gulp-plumber';
+import gulpSass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
 import gulpStylelint from 'gulp-stylelint';
-import changed from 'gulp-changed-in-place';
-
-import { sass as config, isProd } from './config';
+import { isProd, sass as config } from './config';
 
 /**
  * SCSS -> CSS

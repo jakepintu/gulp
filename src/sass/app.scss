@@ -25,13 +25,14 @@ body {
 
 .profile h1 {
   color: white;
-  font-size: 0.7em;
+  font-size: .7em;
   letter-spacing: 5px;
   margin-top: 40px;
   text-shadow: 0 0 20px white;
 }
 
 @keyframes Animation {
+
   0% {
     transform: translateY(-160%);
   }
@@ -54,6 +55,7 @@ body {
 }
 
 @media (min-width: 37.5rem) {
+
   .img {
     width: 18.75em;
   }
@@ -64,6 +66,7 @@ body {
 }
 
 @media (min-width: 64rem) {
+
   .img {
     width: 14em;
   }

@@ -1,12 +1,11 @@
 import gulp from 'gulp';
+import changed from 'gulp-changed-in-place';
+import gulpEslint from 'gulp-eslint';
 import gulpIf from 'gulp-if';
 import plumber from 'gulp-plumber';
-import gulpEslint from 'gulp-eslint';
 import webpack from 'webpack';
 import gulpWebpack from 'webpack-stream';
-import changed from 'gulp-changed-in-place';
-
-import { scripts as config, isProd } from './config';
+import { isProd, scripts as config } from './config';
 
 export function esTranspile() {
   return (
@@ -15,6 +14,7 @@ export function esTranspile() {
       .pipe(plumber())
       // If you use it with gulp.watch, the second argument seems to be necessary.
       // https://www.npmjs.com/package/webpack-stream#usage-with-gulp-watch
+      // eslint-disable-next-line global-require
       .pipe(gulpWebpack(require('../webpack.config.js'), webpack))
       .pipe(gulp.dest(config.dest))
   );

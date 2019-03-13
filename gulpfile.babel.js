@@ -1,20 +1,18 @@
-import { series, parallel, watch } from 'gulp';
-
-import { reload, serve } from './tasks/server';
-import { styles } from './tasks/styles';
-import { scripts } from './tasks/scripts';
-import { templates } from './tasks/templates';
-import { images } from './tasks/images';
+import { parallel, series, watch } from 'gulp';
 import { clean } from './tasks/clean';
-import { fonts } from './tasks/fonts';
-
 import {
+  fonts as fontsConfig,
+  images as imagesConfig,
   sass as sassConfig,
   scripts as jsConfig,
-  images as imagesConfig,
   templates as templatesConfig,
-  fonts as fontsConfig
 } from './tasks/config';
+import { fonts } from './tasks/fonts';
+import { images } from './tasks/images';
+import { scripts } from './tasks/scripts';
+import { reload, serve } from './tasks/server';
+import { styles } from './tasks/styles';
+import { templates } from './tasks/templates';
 
 /**
  * Monitor file changes

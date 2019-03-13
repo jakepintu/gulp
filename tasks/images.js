@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
-
 import { images as config } from './config';
 
 export function images() {

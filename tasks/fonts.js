@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-
 import { fonts as config } from './config';
 
 export function fonts() {
