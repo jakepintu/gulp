@@ -3,75 +3,37 @@
   src: url('../fonts/OperatorMonoLig-Light.otf') format('opentype');
 }
 
-body {
-  background: linear-gradient(to left, #b224ef 0%, #7579ff 100%);
-  font-family: 'OperatorMonoLig', sans-serif;
+html {
+  box-sizing: border-box;
 }
 
-.profile {
-  align-items: center;
-  animation: Animation 2s 1 0s linear;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.is-boxed {
+  background: #eeeeee;
+}
+
+.body-wrap {
+  background: #ffffff;
+  // Sticky footer
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  margin-top: 25vh;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.img {
-  border-radius: 100%;
-  box-shadow: 0 0 20px white;
-  width: 9.375em;
+.boxed-container {
+  box-shadow: 0 16px 48px #dddddd;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-.profile h1 {
-  color: white;
-  font-size: .7em;
-  letter-spacing: 5px;
-  margin-top: 40px;
-  text-shadow: 0 0 20px white;
-}
-
-@keyframes Animation {
-
-  0% {
-    transform: translateY(-160%);
-  }
-
-  25% {
-    transform: translateY(-120%);
-  }
-
-  50% {
-    transform: translateY(-80%);
-  }
-
-  75% {
-    transform: translateY(-40%);
-  }
-
-  100% {
-    transform: rotate(xx) translateY(0);
-  }
-}
-
-@media (min-width: 37.5rem) {
-
-  .img {
-    width: 18.75em;
-  }
-
-  .profile h1 {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 64rem) {
-
-  .img {
-    width: 14em;
-  }
-
-  .profile h1 {
-    font-size: 3em;
-  }
+body {
+  font-family: 'OperatorMonoLig', sans-serif;
+  margin: 0;
+  padding: 0;
 }
